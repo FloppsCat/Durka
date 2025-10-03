@@ -1,0 +1,2288 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 169 | Scripts: 18 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.RealFloppsGUI/Durka Edition
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[RealFloppsGUI/Durka Edition]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel
+G2L["2"] = Instance.new("ImageLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["2"]["ImageColor3"] = Color3.fromRGB(27, 25, 25);
+G2L["2"]["Image"] = [[rbxassetid://121928820297984]];
+G2L["2"]["Size"] = UDim2.new(0, 629, 0, 343);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.45791, 0, 0.25625, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextLabel
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 30;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextColor3"] = Color3.fromRGB(86, 0, 0);
+G2L["4"]["BackgroundTransparency"] = 1;
+G2L["4"]["Size"] = UDim2.new(0, 565, 0, 50);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[Ultimate RealFloppsGUI / Durka Edition]];
+G2L["4"]["Position"] = UDim2.new(0.062, 0, 0.02332, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextLabel.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["4"]);
+G2L["5"]["Color"] = Color3.fromRGB(255, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextLabel.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["4"]);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["6"]["Thickness"] = 2;
+G2L["6"]["Color"] = Color3.fromRGB(255, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextLabel.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["4"]);
+G2L["7"]["CornerRadius"] = UDim.new(0, 50);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec
+G2L["8"] = Instance.new("Frame", G2L["2"]);
+G2L["8"]["Visible"] = false;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["8"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[PlayerSec]];
+G2L["8"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["8"]);
+G2L["9"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.UIStroke
+G2L["a"] = Instance.new("UIStroke", G2L["8"]);
+G2L["a"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk
+G2L["b"] = Instance.new("Frame", G2L["8"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Size"] = UDim2.new(0, 157, 0, 72);
+G2L["b"]["Position"] = UDim2.new(0.03679, 0, 0.04889, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[TPwalk]];
+G2L["b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.TextLabel
+G2L["c"] = Instance.new("TextLabel", G2L["b"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 16;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Size"] = UDim2.new(0, 119, 0, 25);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[TPwalk Amount]];
+G2L["c"]["Position"] = UDim2.new(0.12013, 0, 0.10815, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.TextLabel.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["c"]);
+G2L["d"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.TextLabel.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["c"]);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["e"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.TextLabel.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["c"]);
+G2L["f"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.Amount
+G2L["10"] = Instance.new("TextBox", G2L["b"]);
+G2L["10"]["Name"] = [[Amount]];
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["Size"] = UDim2.new(0, 101, 0, 23);
+G2L["10"]["Position"] = UDim2.new(0.17745, 0, 0.56944, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[]];
+G2L["10"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.Amount.UIStroke
+G2L["11"] = Instance.new("UIStroke", G2L["10"]);
+G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["11"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.Amount.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["10"]);
+G2L["12"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["b"]);
+G2L["13"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPwalk.UIStroke
+G2L["14"] = Instance.new("UIStroke", G2L["b"]);
+G2L["14"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["14"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton
+G2L["15"] = Instance.new("TextButton", G2L["8"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 16;
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Change TPwalk]];
+G2L["15"]["Name"] = [[TPWalkButton]];
+G2L["15"]["Position"] = UDim2.new(0.06833, 0, 0.42667, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton.UIStroke
+G2L["16"] = Instance.new("UIStroke", G2L["15"]);
+G2L["16"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["15"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton.UIStroke
+G2L["18"] = Instance.new("UIStroke", G2L["15"]);
+G2L["18"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["18"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton.LocalScript
+G2L["19"] = Instance.new("LocalScript", G2L["15"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton
+G2L["1a"] = Instance.new("TextButton", G2L["8"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextSize"] = 16;
+G2L["1a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[Float]];
+G2L["1a"]["Name"] = [[FloatButton]];
+G2L["1a"]["Position"] = UDim2.new(0.06833, 0, 0.59111, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton.UIStroke
+G2L["1b"] = Instance.new("UIStroke", G2L["1a"]);
+G2L["1b"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton.UICorner
+G2L["1c"] = Instance.new("UICorner", G2L["1a"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton.UIStroke
+G2L["1d"] = Instance.new("UIStroke", G2L["1a"]);
+G2L["1d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["1d"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1a"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton
+G2L["1f"] = Instance.new("TextButton", G2L["8"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextSize"] = 16;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[Lay]];
+G2L["1f"]["Name"] = [[LayButton]];
+G2L["1f"]["Position"] = UDim2.new(0.06833, 0, 0.75556, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton.UIStroke
+G2L["20"] = Instance.new("UIStroke", G2L["1f"]);
+G2L["20"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["1f"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["1f"]);
+G2L["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["22"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["1f"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton
+G2L["24"] = Instance.new("TextButton", G2L["8"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 16;
+G2L["24"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[Sit]];
+G2L["24"]["Name"] = [[SitButton]];
+G2L["24"]["Position"] = UDim2.new(0.30411, 0, 0.42667, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton.UIStroke
+G2L["25"] = Instance.new("UIStroke", G2L["24"]);
+G2L["25"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["24"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton.UIStroke
+G2L["27"] = Instance.new("UIStroke", G2L["24"]);
+G2L["27"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["27"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["24"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton
+G2L["29"] = Instance.new("TextButton", G2L["2"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextSize"] = 16;
+G2L["29"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[Player]];
+G2L["29"]["Name"] = [[PlayerButton]];
+G2L["29"]["Position"] = UDim2.new(0.0159, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton.UICorner
+G2L["2a"] = Instance.new("UICorner", G2L["29"]);
+G2L["2a"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton.UIStroke
+G2L["2b"] = Instance.new("UIStroke", G2L["29"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton.UIStroke
+G2L["2c"] = Instance.new("UIStroke", G2L["29"]);
+G2L["2c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["2c"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton.LocalScript
+G2L["2d"] = Instance.new("LocalScript", G2L["29"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoButton
+G2L["2e"] = Instance.new("TextButton", G2L["2"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 16;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[Info]];
+G2L["2e"]["Name"] = [[InfoButton]];
+G2L["2e"]["Position"] = UDim2.new(0.17647, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoButton.UICorner
+G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
+G2L["2f"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoButton.UIStroke
+G2L["30"] = Instance.new("UIStroke", G2L["2e"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoButton.UIStroke
+G2L["31"] = Instance.new("UIStroke", G2L["2e"]);
+G2L["31"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["31"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimLockButton
+G2L["32"] = Instance.new("TextButton", G2L["2"]);
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextSize"] = 16;
+G2L["32"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[Aim Lock]];
+G2L["32"]["Name"] = [[AimLockButton]];
+G2L["32"]["Position"] = UDim2.new(0.33704, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimLockButton.UICorner
+G2L["33"] = Instance.new("UICorner", G2L["32"]);
+G2L["33"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimLockButton.UIStroke
+G2L["34"] = Instance.new("UIStroke", G2L["32"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimLockButton.UIStroke
+G2L["35"] = Instance.new("UIStroke", G2L["32"]);
+G2L["35"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["35"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponsButton
+G2L["36"] = Instance.new("TextButton", G2L["2"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 16;
+G2L["36"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[Weapons]];
+G2L["36"]["Name"] = [[WeaponsButton]];
+G2L["36"]["Position"] = UDim2.new(0.49921, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponsButton.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["36"]);
+G2L["37"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponsButton.UIStroke
+G2L["38"] = Instance.new("UIStroke", G2L["36"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponsButton.UIStroke
+G2L["39"] = Instance.new("UIStroke", G2L["36"]);
+G2L["39"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["39"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoButton
+G2L["3a"] = Instance.new("TextButton", G2L["2"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 16;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[Auto]];
+G2L["3a"]["Name"] = [[AutoButton]];
+G2L["3a"]["Position"] = UDim2.new(0.66296, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoButton.UICorner
+G2L["3b"] = Instance.new("UICorner", G2L["3a"]);
+G2L["3b"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoButton.UIStroke
+G2L["3c"] = Instance.new("UIStroke", G2L["3a"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoButton.UIStroke
+G2L["3d"] = Instance.new("UIStroke", G2L["3a"]);
+G2L["3d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["3d"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextButton
+G2L["3e"] = Instance.new("TextButton", G2L["2"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 16;
+G2L["3e"]["TextColor3"] = Color3.fromRGB(141, 0, 0);
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Size"] = UDim2.new(0, 93, 0, 30);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[In progress]];
+G2L["3e"]["Position"] = UDim2.new(0.82353, 0, 0.19534, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextButton.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["3f"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextButton.UIStroke
+G2L["40"] = Instance.new("UIStroke", G2L["3e"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.TextButton.UIStroke
+G2L["41"] = Instance.new("UIStroke", G2L["3e"]);
+G2L["41"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["41"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec
+G2L["42"] = Instance.new("Frame", G2L["2"]);
+G2L["42"]["Visible"] = false;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["42"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Name"] = [[InfoSec]];
+G2L["42"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.UICorner
+G2L["43"] = Instance.new("UICorner", G2L["42"]);
+G2L["43"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.UIStroke
+G2L["44"] = Instance.new("UIStroke", G2L["42"]);
+G2L["44"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP
+G2L["45"] = Instance.new("Frame", G2L["42"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["Size"] = UDim2.new(0, 132, 0, 209);
+G2L["45"]["Position"] = UDim2.new(0.03679, 0, 0.03556, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Name"] = [[ESP]];
+G2L["45"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.UIStroke
+G2L["46"] = Instance.new("UIStroke", G2L["45"]);
+G2L["46"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["46"]["Thickness"] = 2;
+G2L["46"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.UICorner
+G2L["47"] = Instance.new("UICorner", G2L["45"]);
+G2L["47"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.TextLabel
+G2L["48"] = Instance.new("TextLabel", G2L["45"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["TextSize"] = 25;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/Bangers.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["48"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Size"] = UDim2.new(0, 109, 0, 29);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[ESP]];
+G2L["48"]["Position"] = UDim2.new(0.09091, 0, 0.00478, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.TextLabel.UIStroke
+G2L["49"] = Instance.new("UIStroke", G2L["48"]);
+G2L["49"]["Thickness"] = 2;
+G2L["49"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton
+G2L["4a"] = Instance.new("TextButton", G2L["45"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 16;
+G2L["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["BackgroundTransparency"] = 1;
+G2L["4a"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[ESP Players]];
+G2L["4a"]["Name"] = [[ESPButton]];
+G2L["4a"]["Position"] = UDim2.new(0.04755, 0, 0.2008, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton.UIStroke
+G2L["4b"] = Instance.new("UIStroke", G2L["4a"]);
+G2L["4b"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton.UICorner
+G2L["4c"] = Instance.new("UICorner", G2L["4a"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton.UIStroke
+G2L["4d"] = Instance.new("UIStroke", G2L["4a"]);
+G2L["4d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4d"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton.LocalScript
+G2L["4e"] = Instance.new("LocalScript", G2L["4a"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton
+G2L["4f"] = Instance.new("TextButton", G2L["45"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextSize"] = 16;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[Players Info]];
+G2L["4f"]["Name"] = [[PlrInfoButton]];
+G2L["4f"]["Position"] = UDim2.new(0.04755, 0, 0.38261, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton.UIStroke
+G2L["50"] = Instance.new("UIStroke", G2L["4f"]);
+G2L["50"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton.UICorner
+G2L["51"] = Instance.new("UICorner", G2L["4f"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton.UIStroke
+G2L["52"] = Instance.new("UIStroke", G2L["4f"]);
+G2L["52"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["52"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton.LocalScript
+G2L["53"] = Instance.new("LocalScript", G2L["4f"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton
+G2L["54"] = Instance.new("TextButton", G2L["45"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["TextSize"] = 16;
+G2L["54"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["54"]["BackgroundTransparency"] = 1;
+G2L["54"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[Objects ESP]];
+G2L["54"]["Name"] = [[ObjectESPButton]];
+G2L["54"]["Position"] = UDim2.new(0.04755, 0, 0.56922, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton.UIStroke
+G2L["55"] = Instance.new("UIStroke", G2L["54"]);
+G2L["55"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton.UICorner
+G2L["56"] = Instance.new("UICorner", G2L["54"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton.UIStroke
+G2L["57"] = Instance.new("UIStroke", G2L["54"]);
+G2L["57"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["57"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton.LocalScript
+G2L["58"] = Instance.new("LocalScript", G2L["54"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton
+G2L["59"] = Instance.new("TextButton", G2L["45"]);
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["TextSize"] = 16;
+G2L["59"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["59"]["BackgroundTransparency"] = 1;
+G2L["59"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Text"] = [[Weapons ESP]];
+G2L["59"]["Name"] = [[WeaponsESPButton]];
+G2L["59"]["Position"] = UDim2.new(0.04755, 0, 0.75582, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton.UIStroke
+G2L["5a"] = Instance.new("UIStroke", G2L["59"]);
+G2L["5a"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton.UICorner
+G2L["5b"] = Instance.new("UICorner", G2L["59"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton.UIStroke
+G2L["5c"] = Instance.new("UIStroke", G2L["59"]);
+G2L["5c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["5c"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton.LocalScript
+G2L["5d"] = Instance.new("LocalScript", G2L["59"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box
+G2L["5e"] = Instance.new("Frame", G2L["42"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Size"] = UDim2.new(0, 132, 0, 209);
+G2L["5e"]["Position"] = UDim2.new(0.28, 0, 0.036, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Name"] = [[Tracers/Box]];
+G2L["5e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.UIStroke
+G2L["5f"] = Instance.new("UIStroke", G2L["5e"]);
+G2L["5f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["5f"]["Thickness"] = 2;
+G2L["5f"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.UICorner
+G2L["60"] = Instance.new("UICorner", G2L["5e"]);
+G2L["60"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TextLabel
+G2L["61"] = Instance.new("TextLabel", G2L["5e"]);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextSize"] = 25;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/Bangers.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["Size"] = UDim2.new(0, 109, 0, 29);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Text"] = [[Tracers/Box]];
+G2L["61"]["Position"] = UDim2.new(0.09091, 0, 0.00478, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TextLabel.UIStroke
+G2L["62"] = Instance.new("UIStroke", G2L["61"]);
+G2L["62"]["Thickness"] = 2;
+G2L["62"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton
+G2L["63"] = Instance.new("TextButton", G2L["5e"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextSize"] = 16;
+G2L["63"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["BackgroundTransparency"] = 1;
+G2L["63"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[Tracers]];
+G2L["63"]["Name"] = [[TracersButton]];
+G2L["63"]["Position"] = UDim2.new(0.04755, 0, 0.2008, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton.UIStroke
+G2L["64"] = Instance.new("UIStroke", G2L["63"]);
+G2L["64"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton.UICorner
+G2L["65"] = Instance.new("UICorner", G2L["63"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton.UIStroke
+G2L["66"] = Instance.new("UIStroke", G2L["63"]);
+G2L["66"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["66"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton.LocalScript
+G2L["67"] = Instance.new("LocalScript", G2L["63"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton
+G2L["68"] = Instance.new("TextButton", G2L["5e"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["TextSize"] = 16;
+G2L["68"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["68"]["BackgroundTransparency"] = 1;
+G2L["68"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Text"] = [[Boxes]];
+G2L["68"]["Name"] = [[BoxButton]];
+G2L["68"]["Position"] = UDim2.new(0.04755, 0, 0.38261, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton.UIStroke
+G2L["69"] = Instance.new("UIStroke", G2L["68"]);
+G2L["69"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton.UICorner
+G2L["6a"] = Instance.new("UICorner", G2L["68"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton.UIStroke
+G2L["6b"] = Instance.new("UIStroke", G2L["68"]);
+G2L["6b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["6b"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton.LocalScript
+G2L["6c"] = Instance.new("LocalScript", G2L["68"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton
+G2L["6d"] = Instance.new("TextButton", G2L["5e"]);
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["TextSize"] = 16;
+G2L["6d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6d"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[Objects ESP]];
+G2L["6d"]["Name"] = [[ObjectESPButton]];
+G2L["6d"]["Position"] = UDim2.new(0.04755, 0, 0.56922, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton.UIStroke
+G2L["6e"] = Instance.new("UIStroke", G2L["6d"]);
+G2L["6e"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton.UICorner
+G2L["6f"] = Instance.new("UICorner", G2L["6d"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton.UIStroke
+G2L["70"] = Instance.new("UIStroke", G2L["6d"]);
+G2L["70"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["70"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton.LocalScript
+G2L["71"] = Instance.new("LocalScript", G2L["6d"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton
+G2L["72"] = Instance.new("TextButton", G2L["5e"]);
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["TextSize"] = 16;
+G2L["72"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["72"]["BackgroundTransparency"] = 1;
+G2L["72"]["Size"] = UDim2.new(0, 119, 0, 27);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Text"] = [[Weapons ESP]];
+G2L["72"]["Name"] = [[WeaponsESPButton]];
+G2L["72"]["Position"] = UDim2.new(0.04755, 0, 0.75582, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.UIStroke
+G2L["73"] = Instance.new("UIStroke", G2L["72"]);
+G2L["73"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.UICorner
+G2L["74"] = Instance.new("UICorner", G2L["72"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.UIStroke
+G2L["75"] = Instance.new("UIStroke", G2L["72"]);
+G2L["75"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["75"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.LocalScript
+G2L["76"] = Instance.new("LocalScript", G2L["72"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec
+G2L["77"] = Instance.new("Frame", G2L["2"]);
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["77"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Name"] = [[AimSec]];
+G2L["77"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.UICorner
+G2L["78"] = Instance.new("UICorner", G2L["77"]);
+G2L["78"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock
+G2L["79"] = Instance.new("Frame", G2L["77"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["Size"] = UDim2.new(0, 132, 0, 209);
+G2L["79"]["Position"] = UDim2.new(0.03679, 0, 0.03556, 0);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Name"] = [[AimLock]];
+G2L["79"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.UIStroke
+G2L["7a"] = Instance.new("UIStroke", G2L["79"]);
+G2L["7a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["7a"]["Thickness"] = 2;
+G2L["7a"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.UICorner
+G2L["7b"] = Instance.new("UICorner", G2L["79"]);
+G2L["7b"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLabel
+G2L["7c"] = Instance.new("TextLabel", G2L["79"]);
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["TextSize"] = 25;
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Bangers.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["BackgroundTransparency"] = 1;
+G2L["7c"]["Size"] = UDim2.new(0, 109, 0, 29);
+G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Text"] = [[Aim Lock]];
+G2L["7c"]["Name"] = [[AimLabel]];
+G2L["7c"]["Position"] = UDim2.new(0.09091, 0, 0.00478, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLabel.UIStroke
+G2L["7d"] = Instance.new("UIStroke", G2L["7c"]);
+G2L["7d"]["Thickness"] = 2;
+G2L["7d"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.TextLabel
+G2L["7e"] = Instance.new("TextLabel", G2L["79"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["TextSize"] = 14;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["BackgroundTransparency"] = 1;
+G2L["7e"]["Size"] = UDim2.new(0, 92, 0, 17);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Text"] = [[Primary Part]];
+G2L["7e"]["Position"] = UDim2.new(0.15909, 0, 0.1866, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.TextLabel.UIStroke
+G2L["7f"] = Instance.new("UIStroke", G2L["7e"]);
+G2L["7f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["7f"]["Thickness"] = 2;
+G2L["7f"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.TextLabel.UIStroke
+G2L["80"] = Instance.new("UIStroke", G2L["7e"]);
+G2L["80"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.TextLabel.UICorner
+G2L["81"] = Instance.new("UICorner", G2L["7e"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.PrimaryText
+G2L["82"] = Instance.new("TextBox", G2L["79"]);
+G2L["82"]["CursorPosition"] = -1;
+G2L["82"]["Name"] = [[PrimaryText]];
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["TextSize"] = 14;
+G2L["82"]["TextColor3"] = Color3.fromRGB(171, 0, 0);
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["82"]["Size"] = UDim2.new(0, 110, 0, 20);
+G2L["82"]["Position"] = UDim2.new(0.09091, 0, 0.30144, 0);
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Text"] = [[]];
+G2L["82"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.PrimaryText.UIStroke
+G2L["83"] = Instance.new("UIStroke", G2L["82"]);
+G2L["83"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["83"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.UIStroke
+G2L["84"] = Instance.new("UIStroke", G2L["79"]);
+G2L["84"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton
+G2L["85"] = Instance.new("TextButton", G2L["79"]);
+G2L["85"]["BorderSizePixel"] = 0;
+G2L["85"]["TextSize"] = 20;
+G2L["85"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["85"]["BackgroundTransparency"] = 1;
+G2L["85"]["Size"] = UDim2.new(0, 109, 0, 25);
+G2L["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["85"]["Text"] = [[Aim Lock]];
+G2L["85"]["Name"] = [[AimLockButton]];
+G2L["85"]["Position"] = UDim2.new(0.09091, 0, 0.44588, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.UIStroke
+G2L["86"] = Instance.new("UIStroke", G2L["85"]);
+G2L["86"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.UICorner
+G2L["87"] = Instance.new("UICorner", G2L["85"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.UIStroke
+G2L["88"] = Instance.new("UIStroke", G2L["85"]);
+G2L["88"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["88"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.LocalScript
+G2L["89"] = Instance.new("LocalScript", G2L["85"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim
+G2L["8a"] = Instance.new("Frame", G2L["77"]);
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["Size"] = UDim2.new(0, 132, 0, 209);
+G2L["8a"]["Position"] = UDim2.new(0.3, 0, 0.036, 0);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Name"] = [[SilientAim]];
+G2L["8a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.UIStroke
+G2L["8b"] = Instance.new("UIStroke", G2L["8a"]);
+G2L["8b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["8b"]["Thickness"] = 2;
+G2L["8b"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.UICorner
+G2L["8c"] = Instance.new("UICorner", G2L["8a"]);
+G2L["8c"]["CornerRadius"] = UDim.new(0, 15);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.AimLabel
+G2L["8d"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["8d"]["BorderSizePixel"] = 0;
+G2L["8d"]["TextSize"] = 25;
+G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Bangers.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["BackgroundTransparency"] = 1;
+G2L["8d"]["Size"] = UDim2.new(0, 109, 0, 29);
+G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8d"]["Text"] = [[Silient Aim]];
+G2L["8d"]["Name"] = [[AimLabel]];
+G2L["8d"]["Position"] = UDim2.new(0.09091, 0, 0.00478, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.AimLabel.UIStroke
+G2L["8e"] = Instance.new("UIStroke", G2L["8d"]);
+G2L["8e"]["Thickness"] = 2;
+G2L["8e"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.TextLabel
+G2L["8f"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["TextSize"] = 14;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["BackgroundTransparency"] = 1;
+G2L["8f"]["Size"] = UDim2.new(0, 92, 0, 17);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Text"] = [[Primary Part]];
+G2L["8f"]["Position"] = UDim2.new(0.15909, 0, 0.1866, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.TextLabel.UIStroke
+G2L["90"] = Instance.new("UIStroke", G2L["8f"]);
+G2L["90"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["90"]["Thickness"] = 2;
+G2L["90"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.TextLabel.UIStroke
+G2L["91"] = Instance.new("UIStroke", G2L["8f"]);
+G2L["91"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.TextLabel.UICorner
+G2L["92"] = Instance.new("UICorner", G2L["8f"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.PrimaryText2
+G2L["93"] = Instance.new("TextBox", G2L["8a"]);
+G2L["93"]["Name"] = [[PrimaryText2]];
+G2L["93"]["BorderSizePixel"] = 0;
+G2L["93"]["TextSize"] = 14;
+G2L["93"]["TextColor3"] = Color3.fromRGB(171, 0, 0);
+G2L["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["93"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["93"]["Size"] = UDim2.new(0, 110, 0, 20);
+G2L["93"]["Position"] = UDim2.new(0.09091, 0, 0.30144, 0);
+G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Text"] = [[]];
+G2L["93"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.PrimaryText2.UIStroke
+G2L["94"] = Instance.new("UIStroke", G2L["93"]);
+G2L["94"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["94"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.UIStroke
+G2L["95"] = Instance.new("UIStroke", G2L["8a"]);
+G2L["95"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton
+G2L["96"] = Instance.new("TextButton", G2L["8a"]);
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["TextSize"] = 20;
+G2L["96"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["96"]["BackgroundTransparency"] = 1;
+G2L["96"]["Size"] = UDim2.new(0, 109, 0, 24);
+G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["Text"] = [[Silient Aim]];
+G2L["96"]["Name"] = [[SilientAimButton]];
+G2L["96"]["Position"] = UDim2.new(0.09091, 0, 0.44588, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.UIStroke
+G2L["97"] = Instance.new("UIStroke", G2L["96"]);
+G2L["97"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.UICorner
+G2L["98"] = Instance.new("UICorner", G2L["96"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.UIStroke
+G2L["99"] = Instance.new("UIStroke", G2L["96"]);
+G2L["99"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["99"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.LocalScript
+G2L["9a"] = Instance.new("LocalScript", G2L["96"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec
+G2L["9b"] = Instance.new("Frame", G2L["2"]);
+G2L["9b"]["Visible"] = false;
+G2L["9b"]["BorderSizePixel"] = 0;
+G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9b"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["9b"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9b"]["Name"] = [[WeaponSec]];
+G2L["9b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.UICorner
+G2L["9c"] = Instance.new("UICorner", G2L["9b"]);
+G2L["9c"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.UIStroke
+G2L["9d"] = Instance.new("UIStroke", G2L["9b"]);
+G2L["9d"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec
+G2L["9e"] = Instance.new("Frame", G2L["2"]);
+G2L["9e"]["Visible"] = false;
+G2L["9e"]["BorderSizePixel"] = 0;
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["9e"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["9e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9e"]["Name"] = [[AutoSec]];
+G2L["9e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec.UICorner
+G2L["9f"] = Instance.new("UICorner", G2L["9e"]);
+G2L["9f"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec.UIStroke
+G2L["a0"] = Instance.new("UIStroke", G2L["9e"]);
+G2L["a0"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.Inprogress
+G2L["a1"] = Instance.new("Frame", G2L["2"]);
+G2L["a1"]["Visible"] = false;
+G2L["a1"]["BorderSizePixel"] = 0;
+G2L["a1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a1"]["Size"] = UDim2.new(0, 598, 0, 225);
+G2L["a1"]["Position"] = UDim2.new(0.02703, 0, 0.31487, 0);
+G2L["a1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a1"]["Name"] = [[Inprogress]];
+G2L["a1"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.Inprogress.UICorner
+G2L["a2"] = Instance.new("UICorner", G2L["a1"]);
+G2L["a2"]["CornerRadius"] = UDim.new(0, 35);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.Inprogress.UIStroke
+G2L["a3"] = Instance.new("UIStroke", G2L["a1"]);
+G2L["a3"]["Color"] = Color3.fromRGB(86, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.LocalScript
+G2L["a4"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton
+G2L["a5"] = Instance.new("ImageButton", G2L["1"]);
+G2L["a5"]["BorderSizePixel"] = 0;
+G2L["a5"]["BackgroundTransparency"] = 1;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["a5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a5"]["Image"] = [[rbxassetid://126847047647834]];
+G2L["a5"]["Size"] = UDim2.new(0, 95, 0, 87);
+G2L["a5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a5"]["Position"] = UDim2.new(0.03855, 0, 0.29851, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.UICorner
+G2L["a6"] = Instance.new("UICorner", G2L["a5"]);
+G2L["a6"]["CornerRadius"] = UDim.new(0, 17);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.UIStroke
+G2L["a7"] = Instance.new("UIStroke", G2L["a5"]);
+G2L["a7"]["Color"] = Color3.fromRGB(171, 0, 0);
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+G2L["a8"] = Instance.new("LocalScript", G2L["a5"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+G2L["a9"] = Instance.new("LocalScript", G2L["a5"]);
+
+
+
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.TPWalkButton.LocalScript
+local function C_19()
+local script = G2L["19"];
+	local rs = game:GetService("RunService")
+	local plr = game.Players.LocalPlayer
+	local walk = false
+	local tpconnect = nil
+	function changetpwalk()
+		local text = script.Parent.Parent.TPwalk.Amount.Text
+		local amount = tonumber(text)
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+		script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_19);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.FloatButton.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	local StarterGui = game:GetService("StarterGui")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local button = script.Parent
+	
+	local function getRoot(character)
+		if not character then return nil end
+		local root = character:FindFirstChild("HumanoidRootPart") or character.PrimaryPart
+		if not root then
+			root = character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso")
+		end
+		return root
+	end
+	
+	local function notify(title, text, duration)
+		duration = duration or 3
+		pcall(function()
+			StarterGui:SetCore("SendNotification", {
+				Title = tostring(title);
+				Text = tostring(text);
+				Duration = duration;
+			})
+		end)
+	end
+	
+	local floatName = "FloatPad"
+	local Float = nil
+	local connections = {}
+	local hb = nil
+	local floatOffset = -3.1
+	local goingUp, goingDown = false, false
+	local isFloating = false
+	
+	local function cleanup()
+		for _,c in ipairs(connections) do
+			if c and c.Disconnect then pcall(function() c:Disconnect() end) end
+		end
+		connections = {}
+		if hb then hb:Disconnect() hb = nil end
+		if Float and Float.Parent then Float:Destroy() end
+		Float = nil
+		goingUp, goingDown = false, false
+		isFloating = false
+		button.Text = "Float:OFF"
+	end
+	
+	local function startFloat()
+		local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+		local root = getRoot(character)
+		if not root then
+			notify("Float", "HRP not found lil", 2)
+			return
+		end
+		if Float then return end
+	
+		Float = Instance.new("Part")
+		Float.Name = floatName
+		Float.Size = Vector3.new(2, 0.2, 1.5)
+		Float.Anchored = true
+		Float.Transparency = 1
+		Float.CanCollide = true
+		Float.Parent = workspace
+	
+		notify("Float", "Float enabled (E = Up, Q = Down)", 4)
+		button.Text = "Float:ON"
+		isFloating = true
+		floatOffset = -3.1
+	
+		table.insert(connections, UserInputService.InputBegan:Connect(function(input, gpe)
+			if gpe then return end
+			if input.KeyCode == Enum.KeyCode.E then goingUp = true end
+			if input.KeyCode == Enum.KeyCode.Q then goingDown = true end
+		end))
+	
+		table.insert(connections, UserInputService.InputEnded:Connect(function(input)
+			if input.KeyCode == Enum.KeyCode.E then goingUp = false end
+			if input.KeyCode == Enum.KeyCode.Q then goingDown = false end
+		end))
+	
+		hb = RunService.Heartbeat:Connect(function(dt)
+			if not character or not character.Parent then
+				cleanup()
+				return
+			end
+			if goingUp then floatOffset += 4 * dt end
+			if goingDown then floatOffset -= 4 * dt end
+	
+			local r = getRoot(character)
+			if r then
+				Float.CFrame = r.CFrame * CFrame.new(0, floatOffset, 0)
+			end
+		end)
+	
+		local hum = character:FindFirstChildOfClass("Humanoid")
+		if hum then
+			table.insert(connections, hum.Died:Connect(function()
+				cleanup()
+				notify("Float", "Float disabled (Death).", 2)
+			end))
+		end
+	end
+	
+	local function toggleFloat()
+		if isFloating then
+			cleanup()
+		else
+			startFloat()
+		end
+	end
+	
+	button.Text = "Float:OFF"
+	button.MouseButton1Click:Connect(toggleFloat)
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.LayButton.LocalScript
+local function C_23()
+local script = G2L["23"];
+	script.Parent.MouseButton1Click:Connect(function()
+	local speaker = game.Players.LocalPlayer
+	local humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
+	humanoid.Sit = true
+	task.wait(0.1)
+	humanoid.RootPart.CFrame = humanoid.RootPart.CFrame * CFrame.Angles(math.pi * 0.5, 0, 0)
+	for _, v in ipairs(humanoid:GetPlayingAnimationTracks()) do
+		v:Stop()
+		end
+	end)
+end;
+task.spawn(C_23);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerSec.SitButton.LocalScript
+local function C_28()
+local script = G2L["28"];
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Sit = true
+	end)
+end;
+task.spawn(C_28);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.PlayerButton.LocalScript
+local function C_2d()
+local script = G2L["2d"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local sec1 = script.Parent.Parent.PlayerSec
+		local sec2 = script.Parent.Parent.InfoSec
+		local sec3 = script.Parent.Parent.AimLockSec
+		local sec4 = script.Parent.Parent.WeaponSec
+		local sec5 = script.Parent.Parent.AutoSec
+		local sec6 = script.Parent.Parent
+	end)
+end;
+task.spawn(C_2d);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ESPButton.LocalScript
+local function C_4e()
+local script = G2L["4e"];
+	local running = false
+	
+	function depend1(teamName)
+		if teamName == "Житель" then
+			return Color3.new(1, 1, 1)
+		elseif teamName == "Шизоиды" then
+			return Color3.new(0.333333, 0, 0)
+		elseif teamName == "Охранник Дурки" then
+			return Color3.new(0.458824, 0.458824, 0.458824)
+		elseif teamName == "Снабжельцы" then
+			return  Color3.new(0, 0.52549, 0.52549)
+		elseif teamName == "Пресса" then
+			return Color3.new(0, 0.294118, 0.439216)
+		elseif teamName == "Уборщик" then
+			return Color3.new(0, 0.184314, 0.27451)
+		elseif teamName == "Респешион" then
+			return Color3.new(0.333333, 0, 1)
+		elseif teamName == "Упр. Хранилищем" then
+			return Color3.new(0.756863, 0.501961, 0.376471)
+		elseif teamName == "Тюремщик" then
+			return  Color3.new(1, 1, 0)
+		elseif teamName == "Оружейный Диллер" then
+			return Color3.new(0.72549, 0.482353, 0)
+		elseif teamName == "Оружейник дурки" then
+			return Color3.new(0, 0, 1)
+		elseif teamName == "Повар" then
+			return Color3.new(0.270588, 0, 0.407843)
+		elseif teamName == "Медик" then
+			return Color3.new(1, 0, 0)
+		elseif teamName == "Нащальник" then
+			return Color3.new(0, 0, 0)
+		elseif teamName == "Пасхальный Санитар" then
+			return Color3.new(0, 0.592157, 0.890196)
+		elseif teamName == "Солдат" then
+			return Color3.new(0.333333, 1, 0)
+		elseif teamName == "Командир" then
+			return Color3.new(0, 0.333333, 0)
+		end
+	end
+	
+	
+	function  createh(plrs, color)
+			local c = plrs.Character or plrs.CharacterAdded:Wait()
+	local hl = Instance.new("Highlight", plrs.Character)
+	hl.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+	hl.FillTransparency = 0
+		hl.Name = "DurkaLight"
+		hl.FillColor = color
+	end
+	function decline()
+		for _, nigga in ipairs(game.Players:GetPlayers()) do
+			for _,lights in ipairs(nigga.Character:GetChildren()) do
+				if lights.Name == "DurkaLight" then
+					lights:Destroy()
+				end
+			end
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		running = not running
+		if running then
+			for _, nigers in ipairs(game.Players:GetPlayers()) do
+				if nigers.Name ~= game.Players.LocalPlayer.Name then
+					local newcol = depend1(nigers.Team.Name)
+				createh(nigers, newcol)
+				nigers.CharacterAdded:Connect(function()
+					createh(nigers, newcol)
+					end)
+				end
+			end
+		else 
+			decline()
+		end
+	end)
+	
+	
+end;
+task.spawn(C_4e);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.PlrInfoButton.LocalScript
+local function C_53()
+local script = G2L["53"];
+	local showing = false
+	
+	local function mod(color2)
+		if color2 == "Житель" then
+			return Color3.new(1, 1, 1)
+		elseif color2 == "Шизоиды" then
+			return Color3.new(0.333333, 0, 0)
+		elseif color2 == "Охранник Дурки" then
+			return Color3.new(0.458824, 0.458824, 0.458824)
+		elseif color2 == "Снабжельцы" then
+			return  Color3.new(0, 0.52549, 0.52549)
+		elseif color2 == "Пресса" then
+			return Color3.new(0, 0.294118, 0.439216)
+		elseif color2 == "Уборщик" then
+			return Color3.new(0, 0.184314, 0.27451)
+		elseif color2 == "Респешион" then
+			return Color3.new(0.333333, 0, 1)
+		elseif color2 == "Упр. Хранилищем" then
+			return Color3.new(0.756863, 0.501961, 0.376471)
+		elseif color2 == "Тюремщик" then
+			return  Color3.new(1, 1, 0)
+		elseif color2 == "Оружейный Диллер" then
+			return Color3.new(0.72549, 0.482353, 0)
+		elseif color2 == "Оружейник дурки" then
+			return Color3.new(0, 0, 1)
+		elseif color2 == "Повар" then
+			return Color3.new(0.270588, 0, 0.407843)
+		elseif color2 == "Медик" then
+			return Color3.new(1, 0, 0)
+		elseif color2 == "Нащальник" then
+			return Color3.new(0, 0, 0)
+		elseif color2 == "Пасхальный Санитар" then
+			return Color3.new(0, 0.592157, 0.890196)
+		elseif color2 == "Солдат" then
+			return Color3.new(0.333333, 1, 0)
+		elseif color2 == "Командир" then
+			return Color3.new(0, 0.333333, 0)
+		else
+			return color2
+		end
+	end
+	
+	function  createinfo(niggas)
+		local char = niggas.Character
+		local hum = char.Humanoid
+			local info = Instance.new("BillboardGui",char)
+			info.AlwaysOnTop = true
+			info.Name = "info"
+			info.Size = UDim2.new(0,200, 0,50)
+			info.StudsOffset = Vector3.new(0, 3, 0)
+			info.Adornee = niggas.Character
+			local text = Instance.new("TextLabel", info)
+			text.Text = niggas.Name
+			text.TextSize = 16
+			text.Size = UDim2.new(0,200, 0,50)
+		text.BackgroundTransparency = 1
+		text.TextColor3 = mod(niggas.Team.Name)
+		
+		
+			local visual = Instance.new("UIStroke", text)
+			visual.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+			visual.Color = Color3.new(0, 0, 0)
+			
+			local text2 = Instance.new("TextLabel", info)
+			text2.TextSize = 16
+			text2.Size = UDim2.new(0,200, 0,50)
+			text2.BackgroundTransparency = 1
+			text2.TextColor3 = Color3.new(0, 0.666667, 0)
+			text2.Position = UDim2.new(0,0, 0,-25)
+			text2.Text = "Health: "..math.floor(hum.Health)
+				hum.HealthChanged:Connect(function(new)
+					text2.Text = "Health: "..math.floor(new)
+			end)
+			local visual2 = Instance.new("UIStroke", text2)
+			visual2.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+			visual2.Color = Color3.new(0, 0.333333, 0)
+		
+		local text3 = Instance.new("TextLabel", info)
+		text3.TextSize = 16
+		text3.Size = UDim2.new(0,200, 0,50)
+		text3.BackgroundTransparency = 1
+		text3.TextColor3 = Color3.new(1, 0, 0)
+		text3.Position = UDim2.new(0, 0, 0, -49)
+		text3.Text = "Team: "..niggas.Team.Name
+		local visual3 = Instance.new("UIStroke", text3)
+		visual3.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+		visual3.Color = Color3.new(0, 0, 0)
+		end
+	script.Parent.MouseButton1Click:Connect(function()
+		showing = not showing
+		if showing then
+			for _, furry in ipairs(game.Players:GetPlayers()) do
+				if furry.Name ~= game.Players.LocalPlayer.Name then
+				createinfo(furry)
+				furry.CharacterAdded:Connect(function()
+					createinfo(furry)
+				end)
+			end
+		end
+		else 
+			for _, nigga in ipairs(game.Players:GetPlayers()) do
+				for _,infos in ipairs(nigga.Character:GetChildren()) do
+					if infos.Name == "info" then
+						infos:Destroy()
+					end
+				end
+			end
+		end	
+			end)
+	game.Players.PlayerAdded:Connect(function(newniger)
+		newniger.CharacterAdded:Connect(function(character)
+			createinfo(character)
+		end)
+		end)
+	
+	
+end;
+task.spawn(C_53);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.ObjectESPButton.LocalScript
+local function C_58()
+local script = G2L["58"];
+	local running = false
+	
+	function  objecthl()
+		local names = {
+			["DurkaTest"] = true,
+			["Test"] = true,
+			["Test"] = true,
+			["Test"] = true,
+			["Test"] = true,
+			["Test"] = true,
+			
+	}
+		for _, objects in ipairs(workspace:GetDescendants()) do
+			if objects:IsA("Part") and names[objects.Name] then
+				local hl = Instance.new("Highlight", objects)
+				hl.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				hl.FillTransparency = 0.4
+				hl.Name = "TestLight"
+					end
+				end
+			end
+	script.Parent.MouseButton1Click:Connect(function()
+		running = not running
+		if running then
+			objecthl()
+		else 
+			for _, parts in ipairs(workspace:GetDescendants()) do
+				for _,t in ipairs(parts:GetChildren()) do
+					if t.Name == "TestLight" then
+						t:Destroy()
+					end
+				end
+			end
+		end	
+		task.wait(1)
+		workspace.ChildAdded:Connect(function(new)
+			if new:IsA("Part") and new.Name == "DurkaTest" then
+				objecthl() 
+			end
+		end)
+	end)
+	
+	
+end;
+task.spawn(C_58);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.ESP.WeaponsESPButton.LocalScript
+local function C_5d()
+local script = G2L["5d"];
+	local rs = game:GetService("RunService")
+	local plr = game.Players.LocalPlayer
+	local walk = false
+	local tpconnect = nil
+	function changetpwalk()
+		local text = script.Parent.Parent.TPwalk.Amount.Text
+		local amount = tonumber(text)
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+		script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end	
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_5d);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.TracersButton.LocalScript
+local function C_67()
+local script = G2L["67"];
+	local workspace = game:GetService("Workspace")
+	local player = game:GetService("Players").LocalPlayer
+	local camera = workspace.CurrentCamera
+	
+	local on = false
+	local Autothickness = false
+	local function changecol(color)
+	if color == "Житель" then
+		return Color3.new(1, 1, 1)
+	elseif color == "Шизоиды" then
+		return Color3.new(0.333333, 0, 0)
+	elseif color == "Охранник Дурки" then
+		return Color3.new(0.458824, 0.458824, 0.458824)
+	elseif color == "Снабжельцы" then
+		return  Color3.new(0, 0.52549, 0.52549)
+	elseif color == "Пресса" then
+		return Color3.new(0, 0.294118, 0.439216)
+	elseif color == "Уборщик" then
+		return Color3.new(0, 0.184314, 0.27451)
+	elseif color == "Респешион" then
+		return Color3.new(0.333333, 0, 1)
+	elseif color == "Упр. Хранилищем" then
+		return Color3.new(0.756863, 0.501961, 0.376471)
+	elseif color == "Тюремщик" then
+		return  Color3.new(1, 1, 0)
+	elseif color == "Оружейный Диллер" then
+		return Color3.new(0.72549, 0.482353, 0)
+	elseif color == "Оружейник дурки" then
+		return Color3.new(0, 0, 1)
+	elseif color == "Повар" then
+		return Color3.new(0.270588, 0, 0.407843)
+	elseif color == "Медик" then
+		return Color3.new(1, 0, 0)
+	elseif color == "Нащальник" then
+		return Color3.new(0, 0, 0)
+	elseif color == "Пасхальный Санитар" then
+		return Color3.new(0, 0.592157, 0.890196)
+	elseif color == "Солдат" then
+		return Color3.new(0.333333, 1, 0)
+	elseif color == "Командир" then
+		return Color3.new(0, 0.333333, 0)
+	else
+		return color
+		end
+	end
+	
+	local function NewLine(color)
+		local line = Drawing.new("Line")
+		line.Visible = false
+		line.From = Vector2.new(0, 0)
+		line.To = Vector2.new(1, 1)
+		line.Thickness = 1
+		line.Transparency = 1
+		line.Color = color
+		return line
+		end
+	
+	local function ESPForPlayer(plr)
+		if plr == player then return end 
+		local dep = changecol(plr.Team.Name)
+		local tracer = NewLine(dep)
+	
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if on and plr.Character and plr.Character:FindFirstChild("Humanoid") 
+				and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character.Humanoid.Health > 0 then
+	
+				local pos, vis = camera:WorldToViewportPoint(plr.Character.HumanoidRootPart.Position)
+				if vis then
+					local trace = camera:WorldToViewportPoint(plr.Character.HumanoidRootPart.Position + Vector3.new(0, -3, 0))
+					tracer.From = Vector2.new(camera.ViewportSize.X/2, camera.ViewportSize.Y)
+					tracer.To = Vector2.new(trace.X, trace.Y)
+	
+					if Autothickness then
+						local distance = (player.Character.HumanoidRootPart.Position - plr.Character.HumanoidRootPart.Position).Magnitude
+						tracer.Thickness = math.clamp(1/distance*100, 0.1, 4)
+					else
+						tracer.Thickness = 1
+					end
+	
+					tracer.Visible = true
+				else
+					tracer.Visible = false
+				end
+			else
+				tracer.Visible = false
+			end
+		end)
+	end
+	
+	for _, plr in pairs(game.Players:GetPlayers()) do
+		ESPForPlayer(plr)
+	end
+	
+	game.Players.PlayerAdded:Connect(function(plr)
+		ESPForPlayer(plr)
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		on = not on
+	end)
+	
+end;
+task.spawn(C_67);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.BoxButton.LocalScript
+local function C_6c()
+local script = G2L["6c"];
+	local workspace = game:GetService("Workspace")
+	local player = game:GetService("Players").LocalPlayer
+	local camera = workspace.CurrentCamera
+	
+	local on = false
+	
+	local Box_Color = Color3.fromRGB(0, 255, 50)
+	local Box_Thickness = 1.4
+	local Box_Transparency = 1
+	function depend(teamName)
+		if teamName == "Житель" then
+			return Color3.new(1, 1, 1)
+		elseif teamName == "Шизоиды" then
+			return Color3.new(0.333333, 0, 0)
+		elseif teamName == "Охранник Дурки" then
+			return Color3.new(0.458824, 0.458824, 0.458824)
+		elseif teamName == "Снабжельцы" then
+			return  Color3.new(0, 0.52549, 0.52549)
+		elseif teamName == "Пресса" then
+			return Color3.new(0, 0.294118, 0.439216)
+		elseif teamName == "Уборщик" then
+			return Color3.new(0, 0.184314, 0.27451)
+		elseif teamName == "Респешион" then
+			return Color3.new(0.333333, 0, 1)
+		elseif teamName == "Упр. Хранилищем" then
+			return Color3.new(0.756863, 0.501961, 0.376471)
+		elseif teamName == "Тюремщик" then
+			return  Color3.new(1, 1, 0)
+		elseif teamName == "Оружейный Диллер" then
+			return Color3.new(0.72549, 0.482353, 0)
+		elseif teamName == "Оружейник дурки" then
+			return Color3.new(0, 0, 1)
+		elseif teamName == "Повар" then
+			return Color3.new(0.270588, 0, 0.407843)
+		elseif teamName == "Медик" then
+			return Color3.new(1, 0, 0)
+		elseif teamName == "Нащальник" then
+			return Color3.new(0, 0, 0)
+		elseif teamName == "Пасхальный Санитар" then
+			return Color3.new(0, 0.592157, 0.890196)
+		elseif teamName == "Солдат" then
+			return Color3.new(0.333333, 1, 0)
+		elseif teamName == "Командир" then
+			return Color3.new(0, 0.333333, 0)
+		else
+			return Box_Color
+		end
+		end
+	local function NewLine(color)
+		local line = Drawing.new("Line")
+		line.Visible = false
+		line.From = Vector2.new(0, 0)
+		line.To = Vector2.new(1, 1)
+		line.Color = color
+		line.Thickness = Box_Thickness
+		line.Transparency = Box_Transparency
+			return line
+	end
+	
+	local function CreateESP(target)
+		local col = depend(target.Team.Name)
+		local lines = {
+			line1 = NewLine(col),
+			line2 = NewLine(col),
+			line3 = NewLine(col),
+			line4 = NewLine(col),
+			line5 = NewLine(col),
+			line6 = NewLine(col),
+			line7 = NewLine(col),
+			line8 = NewLine(col),
+			line9 = NewLine(col),
+			line10 = NewLine(col),
+			line11 = NewLine(col),
+			line12 = NewLine(col)
+		}
+	
+		local connection
+		connection = game:GetService("RunService").RenderStepped:Connect(function()
+			if on and target.Character and target.Character:FindFirstChild("Humanoid") and target.Character:FindFirstChild("HumanoidRootPart") and target.Name ~= player.Name and target.Character.Humanoid.Health > 0 and target.Character:FindFirstChild("Head") then
+				local pos, vis = camera:WorldToViewportPoint(target.Character.HumanoidRootPart.Position)
+				if vis then
+					local Scale = target.Character.Head.Size.Y / 2
+					local Size = Vector3.new(2, 3, 1.5) * (Scale * 2)
+	
+					local Top1 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, -Size.Z)).p)
+					local Top2 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, Size.Z)).p)
+					local Top3 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, Size.Z)).p)
+					local Top4 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, -Size.Z)).p)
+	
+					local Bottom1 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, -Size.Z)).p)
+					local Bottom2 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, Size.Z)).p)
+					local Bottom3 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, Size.Z)).p)
+					local Bottom4 = camera:WorldToViewportPoint((target.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, -Size.Z)).p)
+	
+					lines.line1.From = Vector2.new(Top1.X, Top1.Y)
+					lines.line1.To = Vector2.new(Top2.X, Top2.Y)
+					lines.line2.From = Vector2.new(Top2.X, Top2.Y)
+					lines.line2.To = Vector2.new(Top3.X, Top3.Y)
+					lines.line3.From = Vector2.new(Top3.X, Top3.Y)
+					lines.line3.To = Vector2.new(Top4.X, Top4.Y)
+					lines.line4.From = Vector2.new(Top4.X, Top4.Y)
+					lines.line4.To = Vector2.new(Top1.X, Top1.Y)
+	
+					lines.line5.From = Vector2.new(Bottom1.X, Bottom1.Y)
+					lines.line5.To = Vector2.new(Bottom2.X, Bottom2.Y)
+					lines.line6.From = Vector2.new(Bottom2.X, Bottom2.Y)
+					lines.line6.To = Vector2.new(Bottom3.X, Bottom3.Y)
+					lines.line7.From = Vector2.new(Bottom3.X, Bottom3.Y)
+					lines.line7.To = Vector2.new(Bottom4.X, Bottom4.Y)
+					lines.line8.From = Vector2.new(Bottom4.X, Bottom4.Y)
+					lines.line8.To = Vector2.new(Bottom1.X, Bottom1.Y)
+	
+					lines.line9.From = Vector2.new(Bottom1.X, Bottom1.Y)
+					lines.line9.To = Vector2.new(Top1.X, Top1.Y)
+					lines.line10.From = Vector2.new(Bottom2.X, Bottom2.Y)
+					lines.line10.To = Vector2.new(Top2.X, Top2.Y)
+					lines.line11.From = Vector2.new(Bottom3.X, Bottom3.Y)
+					lines.line11.To = Vector2.new(Top3.X, Top3.Y)
+					lines.line12.From = Vector2.new(Bottom4.X, Bottom4.Y)
+					lines.line12.To = Vector2.new(Top4.X, Top4.Y)
+	
+					for _, x in pairs(lines) do
+						x.Visible = true
+					end
+				else
+					for _, x in pairs(lines) do
+						x.Visible = false
+					end
+				end
+			else
+				for _, x in pairs(lines) do
+					x.Visible = false
+				end
+				if not game.Players:FindFirstChild(target.Name) then
+					connection:Disconnect()
+				end
+			end
+		end)
+	end
+	
+	for _, v in pairs(game.Players:GetChildren()) do
+		if v ~= player then
+			CreateESP(v)
+		end
+	end
+	
+	game.Players.PlayerAdded:Connect(function(newplr)
+		if newplr ~= player then
+			CreateESP(newplr)
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		on = not on
+	end)
+end;
+task.spawn(C_6c);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.ObjectESPButton.LocalScript
+local function C_71()
+local script = G2L["71"];
+	local rs = game:GetService("RunService")
+	local plr = game.Players.LocalPlayer
+	local walk = false
+	local tpconnect = nil
+	function changetpwalk()
+		local text = script.Parent.Parent.TPwalk.Amount.Text
+		local amount = tonumber(text)
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+		script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end	
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_71);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.LocalScript
+local function C_76()
+local script = G2L["76"];
+	local rs = game:GetService("RunService")
+	local plr = game.Players.LocalPlayer
+	local walk = false
+	local tpconnect = nil
+	function changetpwalk()
+		local text = script.Parent.Parent.TPwalk.Amount.Text
+		local amount = tonumber(text)
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+		script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end	
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_76);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.LocalScript
+local function C_89()
+local script = G2L["89"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+	local Camera = workspace.CurrentCamera
+	local needed = script.Parent.Parent.PrimaryText
+	local primary = needed.Text
+	local AIM_PART = primary
+	local FOV = math.rad(15)
+	local TEAM_CHECK = false
+	local VISIBILITY_CHECK = false
+	local SNAPPING = true
+	local TRIGGERBOT = true
+	
+	local AimEnabled = false
+	local AimConnection = nil
+	
+	
+	local function findTarget()
+		if not AimEnabled then return nil end
+	
+		local closestAngle = FOV
+		local closestTarget = nil
+	
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player == LocalPlayer then continue end
+	
+			if TEAM_CHECK and player.Team == LocalPlayer.Team then continue end
+	
+			local character = player.Character
+			if not character then continue end
+	
+			local humanoid = character:FindFirstChild("Humanoid")
+			if not humanoid or humanoid.Health <= 0 then continue end
+	
+			local targetPart = character:FindFirstChild(AIM_PART)
+			if not targetPart then continue end
+	
+			if VISIBILITY_CHECK then
+				local origin = Camera.CFrame.Position
+				local direction = (targetPart.Position - origin).Unit * 1000
+				local rayParams = RaycastParams.new()
+				rayParams.FilterDescendantsInstances = {LocalPlayer.Character}
+				rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+				local rayResult = workspace:Raycast(origin, direction, rayParams)
+				if not (rayResult and rayResult.Instance:IsDescendantOf(character)) then continue end
+			end
+	
+			local direction = (targetPart.Position - Camera.CFrame.Position).Unit
+			local angle = math.acos(Camera.CFrame.LookVector:Dot(direction))
+	
+			if angle < closestAngle then
+				closestAngle = angle
+				closestTarget = targetPart
+			end
+		end
+	
+		return closestTarget
+	end
+	
+	local function snapToTarget(target)
+		if not AimEnabled then return end
+	
+		if SNAPPING then
+			Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position, target.Position)
+		end
+	
+		if TRIGGERBOT and LocalPlayer.Character then
+			local tool = LocalPlayer.Character:FindFirstChildOfClass("Tool")
+			if tool and tool:FindFirstChild("RemoteEvent") then
+				tool.RemoteEvent:FireServer("Fire", target.Position)
+			end
+		end
+	end
+	
+	local function aimLoop()
+		if not AimEnabled then return end
+	
+		local target = findTarget()
+		if target then
+			snapToTarget(target)
+		end
+	end
+	
+	local function toggleAim()
+		AimEnabled = not AimEnabled
+	
+		if AimEnabled then
+			if not AimConnection then
+				AimConnection = RunService.RenderStepped:Connect(aimLoop)
+			end
+			script.Parent.Text = "Status: Enabled"
+		else
+			if AimConnection then
+				AimConnection:Disconnect()
+				AimConnection = nil
+			end
+			script.Parent.Text = "Status: Disabled"
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(toggleAim)
+	
+	
+	
+	
+end;
+task.spawn(C_89);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.LocalScript
+local function C_9a()
+local script = G2L["9a"];
+	local yes = false
+	local dothis = nil
+	local function findnigers()
+		local thispart = tostring(script.Parent.Parent.PrimaryText2.Text)
+		local slaim = thispart
+			local lp = game.Players.LocalPlayer
+			local closest = math.huge
+			local closestPlayer = nil
+			for _,v in ipairs(game.Players:GetPlayers()) do
+				if v.Name ~= game.Players.LocalPlayer.Name and v.Character ~= game.Players.LocalPlayer.Character  and v.Character:FindFirstChild("HumanoidRootPart") then
+					local currentdis = v.Character:FindFirstChild(slaim).Position
+					local distance = (currentdis - game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude
+					if distance < closest then
+						local ray = Ray.new(lp.Character.HumanoidRootPart.Position, (currentdis - lp.Character.HumanoidRootPart.Position).unit * distance)
+						local hit = workspace:FindPartOnRayWithIgnoreList(ray, {lp.Character, v.Character})
+	
+						if not hit then
+							closest = distance
+							closestPlayer = v
+						end
+					end
+				end
+		end
+		if closestPlayer then
+			return closestPlayer.Character:FindFirstChild(slaim).Position
+		end
+		return nil
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		yes = not yes
+		if yes then
+			 dothis = game:GetService("RunService").Heartbeat:Connect(function()
+				 if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart then
+					local thispos = findnigers()
+					if thispos then
+						local args = {
+							Vector3.new(thispos.X, thispos.Y, thispos.Z)
+						}
+						game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):WaitForChild("Fire"):FireServer(unpack(args))
+					end
+				end
+			end)
+			script.Parent.Text = "Silient Aim: ON"
+		else
+			if dothis then
+				dothis:Disconnect()
+				dothis = nil
+			end
+			script.Parent.Text = "Silient Aim: OFF"
+		end
+	end)
+	
+	
+	
+	
+end;
+task.spawn(C_9a);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.LocalScript
+local function C_a4()
+local script = G2L["a4"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end;
+task.spawn(C_a4);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+local function C_a8()
+local script = G2L["a8"];
+	local RunServ = game:GetService("RunService")
+	local btn = script.Parent
+	function rotate()
+		btn.Rotation = (btn.Rotation + 1)
+	end
+	
+	local h = RunServ.RenderStepped:Connect(function()
+		rotate()
+	end)
+end;
+task.spawn(C_a8);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+local function C_a9()
+local script = G2L["a9"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ImageLabel.Visible = not script.Parent.Parent.ImageLabel.Visible
+	end)
+end;
+task.spawn(C_a9);
+
+return G2L["1"], require;
