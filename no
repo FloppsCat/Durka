@@ -2702,4 +2702,455 @@ local script = G2L["99"];
 	function changetpwalk()
 		local text = script.Parent.Parent.TPwalk.Amount.Text
 		local amount = tonumber(text)
-		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDire
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+			script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end	
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_99);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.InfoSec.Tracers/Box.WeaponsESPButton.LocalScript
+local function C_9e()
+	local script = G2L["9e"];
+	local rs = game:GetService("RunService")
+	local plr = game.Players.LocalPlayer
+	local walk = false
+	local tpconnect = nil
+	function changetpwalk()
+		local text = script.Parent.Parent.TPwalk.Amount.Text
+		local amount = tonumber(text)
+		plr.Character.HumanoidRootPart.CFrame = plr.Character.HumanoidRootPart.CFrame + (plr.Character.Humanoid.MoveDirection * amount)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		walk = not walk
+		if walk then
+			if not tpconnect then
+				tpconnect = rs.Heartbeat:Connect(changetpwalk)
+			end	
+			script.Parent.Text = "TPwalk: ON"		
+		else
+			if tpconnect then
+				tpconnect:Disconnect()
+				tpconnect = nil
+			end	
+			script.Parent.Text = "TPwalk: OFF"
+		end
+	end)
+end;
+task.spawn(C_9e);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.AimLock.AimLockButton.LocalScript
+local function C_b1()
+	local script = G2L["b1"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TweenService = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+
+	local LocalPlayer = Players.LocalPlayer
+	local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+	local Camera = workspace.CurrentCamera
+	local needed = tostring(script.Parent.Parent.PrimaryText.Text)
+	local primary = needed
+	local AIM_PART = primary
+	local FOV = math.rad(20)
+	local TEAM_CHECK = false
+	local VISIBILITY_CHECK = false
+	local SNAPPING = true
+	local TRIGGERBOT = true
+
+	local AimEnabled = false
+	local AimConnection = nil
+
+
+	local function findTarget()
+		if not AimEnabled then return nil end
+
+		local closestAngle = FOV
+		local closestTarget = nil
+
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player == LocalPlayer then continue end
+
+			if TEAM_CHECK and player.Team == LocalPlayer.Team then continue end
+
+			local character = player.Character
+			if not character then continue end
+
+			local humanoid = character:FindFirstChild("Humanoid")
+			if not humanoid or humanoid.Health <= 0 then continue end
+
+			local targetPart = character:FindFirstChild(AIM_PART)
+			if not targetPart then continue end
+
+			if VISIBILITY_CHECK then
+				local origin = Camera.CFrame.Position
+				local direction = (targetPart.Position - origin).Unit * 1000
+				local rayParams = RaycastParams.new()
+				rayParams.FilterDescendantsInstances = {LocalPlayer.Character}
+				rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+				local rayResult = workspace:Raycast(origin, direction, rayParams)
+				if not (rayResult and rayResult.Instance:IsDescendantOf(character)) then continue end
+			end
+
+			local direction = (targetPart.Position - Camera.CFrame.Position).Unit
+			local angle = math.acos(Camera.CFrame.LookVector:Dot(direction))
+
+			if angle < closestAngle then
+				closestAngle = angle
+				closestTarget = targetPart
+			end
+		end
+
+		return closestTarget
+	end
+
+	local function snapToTarget(target)
+		if not AimEnabled then return end
+
+		if SNAPPING then
+			Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position, target.Position)
+		end
+
+		if TRIGGERBOT and LocalPlayer.Character then
+			local tool = LocalPlayer.Character:FindFirstChildOfClass("Tool")
+			if tool and tool:FindFirstChild("RemoteEvent") then
+				tool.RemoteEvent:FireServer("Fire", target.Position)
+			end
+		end
+	end
+
+	local function aimLoop()
+		if not AimEnabled then return end
+
+		local target = findTarget()
+		if target then
+			snapToTarget(target)
+		end
+	end
+
+	local function toggleAim()
+		AimEnabled = not AimEnabled
+
+		if AimEnabled then
+			if not AimConnection then
+				AimConnection = RunService.RenderStepped:Connect(aimLoop)
+			end
+			script.Parent.Text = "Status: Enabled"
+		else
+			if AimConnection then
+				AimConnection:Disconnect()
+				AimConnection = nil
+			end
+			script.Parent.Text = "Status: Disabled"
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(toggleAim)
+
+
+
+
+end;
+task.spawn(C_b1);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AimSec.SilientAim.SilientAimButton.LocalScript
+local function C_c2()
+	local script = G2L["c2"];
+	local yes = false
+	local dothis = nil
+	local function findnigers()
+		local thispart = tostring(script.Parent.Parent.PrimaryText2.Text)
+		local slaim = thispart
+		local lp = game.Players.LocalPlayer
+		local closest = math.huge
+		local closestPlayer = nil
+		for _,v in ipairs(game.Players:GetPlayers()) do
+			if v.Name ~= game.Players.LocalPlayer.Name and v.Character ~= game.Players.LocalPlayer.Character  and v.Character:FindFirstChild("HumanoidRootPart") then
+				local currentdis = v.Character:FindFirstChild(slaim).Position
+				local distance = (currentdis - game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude
+				if distance < closest then
+					local ray = Ray.new(lp.Character.HumanoidRootPart.Position, (currentdis - lp.Character.HumanoidRootPart.Position).unit * distance)
+					local hit = workspace:FindPartOnRayWithIgnoreList(ray, {lp.Character, v.Character})
+
+					if not hit then
+						closest = distance
+						closestPlayer = v
+					end
+				end
+			end
+		end
+		if closestPlayer then
+			return closestPlayer.Character:FindFirstChild(slaim).Position
+		end
+		return nil
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		yes = not yes
+		if yes then
+			dothis = game:GetService("RunService").Heartbeat:Connect(function()
+				if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart then
+					local thispos = findnigers()
+					if thispos then
+						local args = {
+							Vector3.new(thispos.X, thispos.Y, thispos.Z)
+						}
+						game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):WaitForChild("Fire"):FireServer(unpack(args))
+					end
+				end
+			end)
+			script.Parent.Text = "Silient Aim: ON"
+		else
+			if dothis then
+				dothis:Disconnect()
+				dothis = nil
+			end
+			script.Parent.Text = "Silient Aim: OFF"
+		end
+	end)
+
+
+
+
+end;
+task.spawn(C_c2);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.LocalScript
+local function C_ca()
+	local script = G2L["ca"];
+	local function easylil()
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "StoikaM" then
+				for _,ammos in ipairs(v:GetChildren()) do 
+					if ammos:IsA("MeshPart") then
+						local click = ammos:FindFirstChild("ClickDetector")
+						fireclickdetector(click, 1)  
+					end
+				end
+			end
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		easylil()
+	end)
+end;
+task.spawn(C_ca);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.LocalScript
+local function C_cf()
+	local script = G2L["cf"];
+	local ismoded = false
+	local modding = nil
+	local function mod()
+		for _, stuff in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if stuff:IsA("Tool") then
+				if stuff:FindFirstChild("ConfigGun") then
+					local req = require(stuff.ConfigGun)
+					req.RecoilX = 0
+					req.RecoilY = 0
+				end
+			end
+		end
+		task.wait()
+		for _, tool2 in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if tool2:IsA("Tool") then
+				if tool2:FindFirstChild("ConfigGun") then
+					local req = require(tool2.ConfigGun)
+					req.RecoilX = 0
+					req.RecoilY = 0
+				end
+			end
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		ismoded = not ismoded
+		if ismoded then
+			modding = game:GetService("RunService").Heartbeat:Connect(mod)
+			script.Parent.Text = "Gun Mod: ON"
+		else
+			modding:Disconnect()
+			modding = nil
+			script.Parent.Text = "Gun Mod: OFF"
+		end
+	end)
+end;
+task.spawn(C_cf);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec.AutoFarmButton.LocalScript
+local function C_d7()
+	local script = G2L["d7"];
+	local farm = false
+	local serv = game:GetService("RunService")
+	local isselling = false
+	local function sell()
+		isselling = true
+		local plr = game.Players.LocalPlayer
+		if plr.Backpack:FindFirstChild('Артефакт "Плоть"') or plr.Character:FindFirstChild('Артефакт "Плоть"') then
+			plr.Character.HumanoidRootPart.CFrame = CFrame.new(-122.722298, 2.99999976, 218.784363, 0.954734802, -3.36449162e-08, -0.297458351, 1.59819429e-08, 1, -6.18116758e-08, 0.297458351, 5.42597967e-08, 0.954734802)
+			serv.Heartbeat:Wait()
+			task.wait(0.5)
+			game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):InvokeServer("DialogFunction", "Dialog", workspace:WaitForChild("Asylum"):WaitForChild("Structure"):WaitForChild("Outside"):WaitForChild("\208\191\208\190\209\129\209\130\209\128\208\190\208\185\208\186\208\184"):WaitForChild("\208\154\208\184\208\190\209\129\208\186"):WaitForChild("Dialog"):WaitForChild("DialogModule"))
+			serv.Heartbeat:Wait()
+			task.wait(0.5)
+			game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):InvokeServer("DialogFunction", true, 1)
+			serv.Heartbeat:Wait()
+			task.wait(0.5)
+			game:GetService("ReplicatedStorage"):WaitForChild("ShopInteraction"):InvokeServer(1, 3, 2)
+			serv.Heartbeat:Wait()
+			task.wait(0.5)
+			game:GetService("ReplicatedStorage"):WaitForChild("ShopInteraction"):InvokeServer(2, 1)
+			serv.Heartbeat:Wait()
+		end
+		isselling = false
+	end
+	local function get()
+		local thisplr = game.Players.LocalPlayer
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == 'Артефакт "Плоть"' and v:IsA("MeshPart") then
+				if thisplr.Character and thisplr.Character.HumanoidRootPart then
+					thisplr.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0, 2.5, -3)
+					serv.Heartbeat:Wait()
+				end
+				local click = v:FindFirstChild("ClickDetector")
+				if click then fireclickdetector(click, 1) 
+					serv.Heartbeat:Wait()
+				end
+				break
+			end
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		farm = not farm
+		if farm then
+			script.Parent.Text = "Auto Farm: ON"
+			repeat
+				if not isselling then
+					local artifact = game.Players.LocalPlayer.Backpack:FindFirstChild('Артефакт "Плоть"') or game.Players.LocalPlayer.Character:FindFirstChild('Артефакт "Плоть"')
+					if artifact then
+						sell()
+					else
+						get()
+					end
+				end
+				serv.Heartbeat:Wait()
+			until not farm
+			script.Parent.Text = "Auto Farm: OFF"
+		end
+	end)
+end;
+task.spawn(C_d7);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec.AutoAmmoButton.LocalScript
+local function C_dc()
+	local script = G2L["dc"];
+	local isactivated = false
+	local filling = nil
+	function refill()
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "StoikaM" then
+				for _,ammos in ipairs(v:GetChildren()) do 
+					if ammos:IsA("MeshPart") then
+						local click = ammos:FindFirstChild("ClickDetector")
+						fireclickdetector(click, 1)  
+					end
+				end
+			end
+		end
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		isactivated = not isactivated
+		if isactivated then
+			filling = game:GetService("RunService").Heartbeat:Connect(function()
+				refill()
+			end)
+			script.Parent.Text = "Auto Ammo: ON"
+		else
+			filling:Disconnect()
+			filling = nil
+			script.Parent.Text = "Auto Ammo: OFF"
+		end
+	end)
+end;
+task.spawn(C_dc);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.AutoSec.AutoReloadButton.LocalScript
+local function C_e1()
+	local script = G2L["e1"];
+	local reload = false
+	local isrealoding = nil
+	function refill()
+		local names = {"Дубинка", "Наручники", "Электрошокер", "Карта охранника", "Бита", "Молотов",}
+		for i,h in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if h:IsA("Tool") and h.Name ~= names then
+				local gunconf = require(h.ConfigGun)
+				if gunconf then 
+					local ammo = gunconf.AmmoInMag
+					if ammo == 0 then
+						game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):WaitForChild("Reload"):FireServer()
+					end
+				end
+			end
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		reload = not reload
+		if reload then
+			isrealoding = game:GetService("RunService").Heartbeat:Connect(function()
+				refill()
+			end)
+			script.Parent.Text = "Auto Reload: ON"
+		else
+			isrealoding:Disconnect()
+			isrealoding = nil
+			script.Parent.Text = "Auto Reload: OFF"
+		end
+	end)
+end;
+task.spawn(C_e1);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.LocalScript
+local function C_e5()
+	local script = G2L["e5"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end;
+task.spawn(C_e5);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.DeviceOptimizator
+local function C_e6()
+	local script = G2L["e6"];
+
+end;
+task.spawn(C_e6);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+local function C_ea()
+	local script = G2L["ea"];
+	local RunServ = game:GetService("RunService")
+	local btn = script.Parent
+	function rotate()
+		btn.Rotation = (btn.Rotation + 1)
+	end
+
+	local h = RunServ.RenderStepped:Connect(function()
+		rotate()
+	end)
+end;
+task.spawn(C_ea);
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageButton.LocalScript
+local function C_eb()
+	local script = G2L["eb"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ImageLabel.Visible = not script.Parent.Parent.ImageLabel.Visible
+	end)
+end;
+task.spawn(C_eb);
+
+return G2L["1"], require;
