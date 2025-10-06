@@ -2893,7 +2893,6 @@ task.spawn(C_d7);
 local function C_dc()
 	local script = G2L["dc"];
 	local isactivated = false
-	local filling = false
 	function refill()
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v.Name == "StoikaM" then
@@ -2911,17 +2910,13 @@ local function C_dc()
 		isactivated = not isactivated
 		if isactivated then
 			script.Parent.Text = "Auto Ammo: ON"
-			filling = true
-			coroutine.wrap(function()
-				while filling do
+			spawn(function()
+				while isactivated do
 					refill()
-					task.wait(19)
+					task.wait(20)
 				end
-			end)()
+			end)
 		else
-			if filling then
-				filling = false
-			end
 			script.Parent.Text = "Auto Ammo: OFF"
 		end
 	end)
