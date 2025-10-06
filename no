@@ -1534,7 +1534,7 @@ G2L["ca"] = Instance.new("LocalScript", G2L["c6"]);
 
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton
 G2L["cb"] = Instance.new("TextButton", G2L["c3"]);
 G2L["cb"]["BorderSizePixel"] = 0;
 G2L["cb"]["TextSize"] = 16;
@@ -1545,27 +1545,27 @@ G2L["cb"]["BackgroundTransparency"] = 1;
 G2L["cb"]["Size"] = UDim2.new(0, 119, 0, 27);
 G2L["cb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["cb"]["Text"] = [[Gun Mod]];
-G2L["cb"]["Name"] = [[AmmoButton]];
+G2L["cb"]["Name"] = [[GunModButton]];
 G2L["cb"]["Position"] = UDim2.new(0.03656, 0, 0.22222, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.UIStroke
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton.UIStroke
 G2L["cc"] = Instance.new("UIStroke", G2L["cb"]);
 G2L["cc"]["Color"] = Color3.fromRGB(171, 0, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.UICorner
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton.UICorner
 G2L["cd"] = Instance.new("UICorner", G2L["cb"]);
 
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.UIStroke
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton.UIStroke
 G2L["ce"] = Instance.new("UIStroke", G2L["cb"]);
 G2L["ce"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["ce"]["Color"] = Color3.fromRGB(86, 0, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.LocalScript
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton.LocalScript
 G2L["cf"] = Instance.new("LocalScript", G2L["cb"]);
 
 
@@ -2787,7 +2787,7 @@ local function C_ca()
 	end)
 end;
 task.spawn(C_ca);
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.AmmoButton.LocalScript
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.WeaponSec.GunModButton.LocalScript
 local function C_cf()
 	local script = G2L["cf"];
 	local ismoded = false
@@ -2919,7 +2919,9 @@ local function C_dc()
 				end
 			end)()
 		else
-			filling = false
+			if filling then
+				filling = false
+			end
 			script.Parent.Text = "Auto Ammo: OFF"
 		end
 	end)
