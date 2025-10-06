@@ -2749,6 +2749,7 @@ local script = G2L["c2"];
 						}
 						game:GetService("ReplicatedStorage"):WaitForChild("ReplicationManager"):WaitForChild("Fire"):FireServer(unpack(args))
 					end
+					
 
 				end
 			end)
@@ -2897,16 +2898,23 @@ local function C_dc()
 	script.Parent.MouseButton1Click:Connect(function()
 		isactivated = not isactivated
 		if isactivated then
-			isfilling = game:GetService("RunService").Heartbeat:Connect(function()
-				for i,v in pairs(workspace:GetDescendants()) do
-					if v.Name == "StoikaM" then
-						for _,ammos in ipairs(v:GetChildren()) do 
-							if ammos:IsA("MeshPart") then
-								local click = ammos:FindFirstChild("ClickDetector")
-								fireclickdetector(click, 1)  
+			local timer = 0
+			isfilling =game:GetService("RunService").Heartbeat:Connect(function(delta)
+				timer = timer + delta
+				if timer >= 0.2 then -- задержка 0.2 секунды между срабатываниями
+					for _, v in pairs(workspace:GetDescendants()) do
+						if v.Name == "StoikaM" then
+							for _, ammos in ipairs(v:GetChildren()) do
+								if ammos:IsA("MeshPart") then
+									local click = ammos:FindFirstChild("ClickDetector")
+									if click then
+										fireclickdetector(click, 1)
+									end
+								end
 							end
 						end
 					end
+					timer = 0
 				end
 			end)
 			script.Parent.Text = "Auto Ammo: ON"
