@@ -1731,7 +1731,7 @@ G2L["e5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]
 G2L["e5"]["BackgroundTransparency"] = 1;
 G2L["e5"]["Size"] = UDim2.new(0, 119, 0, 27);
 G2L["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e5"]["Text"] = [[Auto Ammo]];
+G2L["e5"]["Text"] = [[ACS Bypass]];
 G2L["e5"]["Name"] = [[BypassButton]];
 G2L["e5"]["Position"] = UDim2.new(0.03656, 0, 0.04889, 0);
 
@@ -2747,6 +2747,7 @@ local script = G2L["c2"];
 			local lp = game.Players.LocalPlayer
 			local closest = math.huge
 		local closestPlayer = nil
+
 		for _,v in ipairs(game.Players:GetPlayers()) do
 			if v.Name ~= game.Players.LocalPlayer.Name and v.Character ~= game.Players.LocalPlayer.Character  and v.Character:FindFirstChild("HumanoidRootPart") then
 				local currentdis = v.Character:FindFirstChild(primarypartname).Position
@@ -2767,8 +2768,6 @@ local script = G2L["c2"];
 		end
 		return nil
 	end
-	
-
 
 	script.Parent.MouseButton1Click:Connect(function()
 		yes = not yes
