@@ -2767,8 +2767,6 @@ local script = G2L["c2"];
 		end
 		return nil
 	end
-	
-
 
 	script.Parent.MouseButton1Click:Connect(function()
 		yes = not yes
