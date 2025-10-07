@@ -1721,7 +1721,7 @@ G2L["e4"] = Instance.new("UIStroke", G2L["e2"]);
 G2L["e4"]["Color"] = Color3.fromRGB(86, 0, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton
 G2L["e5"] = Instance.new("TextButton", G2L["e2"]);
 G2L["e5"]["BorderSizePixel"] = 0;
 G2L["e5"]["TextSize"] = 16;
@@ -1732,27 +1732,27 @@ G2L["e5"]["BackgroundTransparency"] = 1;
 G2L["e5"]["Size"] = UDim2.new(0, 119, 0, 27);
 G2L["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e5"]["Text"] = [[Auto Ammo]];
-G2L["e5"]["Name"] = [[AutoAmmoButton]];
+G2L["e5"]["Name"] = [[BypassButton]];
 G2L["e5"]["Position"] = UDim2.new(0.03656, 0, 0.04889, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton.UIStroke
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton.UIStroke
 G2L["e6"] = Instance.new("UIStroke", G2L["e5"]);
 G2L["e6"]["Color"] = Color3.fromRGB(171, 0, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton.UICorner
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton.UICorner
 G2L["e7"] = Instance.new("UICorner", G2L["e5"]);
 
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton.UIStroke
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton.UIStroke
 G2L["e8"] = Instance.new("UIStroke", G2L["e5"]);
 G2L["e8"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["e8"]["Color"] = Color3.fromRGB(86, 0, 0);
 
 
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton.LocalScript
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton.LocalScript
 G2L["e9"] = Instance.new("LocalScript", G2L["e5"]);
 
 
@@ -2767,6 +2767,8 @@ local script = G2L["c2"];
 		end
 		return nil
 	end
+	
+
 
 	script.Parent.MouseButton1Click:Connect(function()
 		yes = not yes
@@ -2995,7 +2997,7 @@ local function C_e1()
 	end)
 end;
 task.spawn(C_e1);
--- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.AutoAmmoButton.LocalScript
+-- StarterGui.RealFloppsGUI/Durka Edition.ImageLabel.BypassSec.BypassButton.LocalScript
 local function C_e9()
 	local script = G2L["e9"];
 	local isactive = false
